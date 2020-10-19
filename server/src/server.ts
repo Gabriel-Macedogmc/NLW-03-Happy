@@ -1,6 +1,8 @@
 import { json } from 'body-parser';
 import express from 'express'
 
+import './database/connection';
+
 const app = express();
 
 app.use(json());
