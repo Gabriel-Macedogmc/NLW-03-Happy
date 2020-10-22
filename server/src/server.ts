@@ -2,13 +2,11 @@ import { json } from 'body-parser';
 import express from 'express'
 
 import './database/connection';
+import router from './routes';
 
 const app = express();
 
 app.use(json());
-
-app.get('/', (req, res) => {
-    res.json({menssage: "ola API"})
-})
+app.use(router);
 
 app.listen(3333, () => console.log('Server On!'));
